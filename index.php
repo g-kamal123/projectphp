@@ -128,24 +128,13 @@
             }
       }
   }
-} 
-  echo "<h2>"."Advance Task 4,5 delete..,update.."."</h2>";
-  echo '<table width="400px" height="400px" border="1px" style="border-collapse:collapse;">';
-  echo "<thead><tr><th>category</th><th>subcategory</th><th>ID</th><th>Name</th><th>Brand</th></tr></thead>";
-  echo "<tbody>";
+} echo "<h2>"."task 4 ,5 ..delete..and update.."."</h2>";
   foreach($products as $key => $value){
       foreach($value as $key1 => $val1){
-          foreach($val1 as $key2){ 
-            if($key2["id"]!="PR003"){
-              echo "<tr>";
-              echo "<td>".$key."</td>";
-              echo "<td>".$key1."</td>";
-              foreach($key2 as $key3 ) {
-                  echo "<td>".$key3."</td>";
-              }
-              echo "</tr>";
+          foreach($val1 as $key2 => $val2){ 
+            if($val2["id"]=="PR003"){
+              unset($products[$key][$key1][$key2]);
             }
-              
           }
       }
   }
